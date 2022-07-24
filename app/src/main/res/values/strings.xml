@@ -5,6 +5,6 @@
     <!-- Splash Screen Fragment -->
     <string name="impossible">impossible</string>
     <string name="or">or</string>
-    <string name="i_am_possible">i\'m possible</string>
+    <string name="i_am_possible">i\'m possible?</string>
 
 </resources>

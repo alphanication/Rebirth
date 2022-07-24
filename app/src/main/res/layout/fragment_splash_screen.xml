@@ -6,18 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.splash.SplashScreenFragment">
 
-    <TextView
-        android:id="@+id/tvImpossibleCenter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_180sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:text="@string/impossible"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_22ssp"
+    <ImageView
+        android:id="@+id/ivIAmPossible"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:src="@drawable/ic_person_pin"
         android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tvIAmPossible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/design_default_color_primary" />
+
+    <TextView
+        android:id="@+id/tvIAmPossible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/i_am_possible"
+        android:textAllCaps="true"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,31 +39,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/design_default_color_primary"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_2sdp"
         android:text="@string/or"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="@color/design_default_color_on_primary"
         android:textSize="@dimen/_22ssp"
         android:textStyle="italic|bold"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/tvIAmPossible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvImpossibleCenter" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvIAmPossible"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvImpossible"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_180sdp"
-        android:text="@string/i_am_possible"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_18ssp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="@string/impossible"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/_24ssp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
