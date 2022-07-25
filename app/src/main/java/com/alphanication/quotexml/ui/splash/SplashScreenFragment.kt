@@ -12,7 +12,6 @@ import com.alphanication.quotexml.databinding.FragmentSplashScreenBinding
 import com.alphanication.quotexml.utils.hide
 import com.alphanication.quotexml.utils.show
 import kotlinx.coroutines.*
-import org.koin.android.ext.android.inject
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : Fragment() {
