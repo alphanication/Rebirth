@@ -9,5 +9,14 @@
         android:id="@+id/splashScreenFragment"
         android:name="com.alphanication.quotexml.ui.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" />
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mainQuoteFragment"
+            app:destination="@id/mainQuoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainQuoteFragment"
+        android:name="com.alphanication.quotexml.ui.mainquote.MainQuoteFragment"
+        android:label="fragment_main_quote"
+        tools:layout="@layout/fragment_main_quote" />
 </navigation>
