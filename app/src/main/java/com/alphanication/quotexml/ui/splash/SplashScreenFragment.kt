@@ -9,15 +9,25 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.alphanication.quotexml.R
 import com.alphanication.quotexml.databinding.FragmentSplashScreenBinding
+import com.alphanication.quotexml.di.MainCoroutineScope
 import com.alphanication.quotexml.utils.hide
 import com.alphanication.quotexml.utils.show
-import kotlinx.coroutines.*
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
+@AndroidEntryPoint
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : Fragment() {
 
+    @Inject
+    @MainCoroutineScope
+    lateinit var mainCoroutineScope: CoroutineScope
+
     private lateinit var binding: FragmentSplashScreenBinding
-    private val mainScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,20 +44,20 @@ class SplashScreenFragment : Fragment() {
         showStartViews()
     }
 
-    private fun startMainScreen() = mainScope.launch {
+    private fun startMainScreen() = mainCoroutineScope.launch {
         delay(START_MAIN_SCREEN_DELAY)
         findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
     }
 
-    private fun showStartViews() = mainScope.launch {
+    private fun showStartViews() = mainCoroutineScope.launch {
         binding.apply {
             tvImpossible.show()
 
-            delay(TV_OR_DELAYS)
+            delay(TV_OR_DELAY)
             tvOr.show()
             tvImpossible.hide()
 
-            delay(TV_I_AM_POSSIBLE_DELAYS)
+            delay(TV_I_AM_POSSIBLE_DELAY)
             tvIAmPossible.show()
             tvOr.hide()
 
@@ -56,8 +66,8 @@ class SplashScreenFragment : Fragment() {
     }
 
     companion object {
-        private const val TV_OR_DELAYS = 1000L
-        private const val TV_I_AM_POSSIBLE_DELAYS = 800L
+        private const val TV_OR_DELAY = 1000L
+        private const val TV_I_AM_POSSIBLE_DELAY = 800L
         private const val START_MAIN_SCREEN_DELAY = 800L
     }
 }
