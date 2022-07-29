@@ -40,34 +40,6 @@ class SplashScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        showStartViews()
     }
 
-    private fun startMainScreen() = mainCoroutineScope.launch {
-        delay(START_MAIN_SCREEN_DELAY)
-        findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
-    }
-
-    private fun showStartViews() = mainCoroutineScope.launch {
-        binding.apply {
-            tvImpossible.show()
-
-            delay(TV_OR_DELAY)
-            tvOr.show()
-            tvImpossible.hide()
-
-            delay(TV_I_AM_POSSIBLE_DELAY)
-            tvIAmPossible.show()
-            tvOr.hide()
-
-            startMainScreen()
-        }
-    }
-
-    companion object {
-        private const val TV_OR_DELAY = 1000L
-        private const val TV_I_AM_POSSIBLE_DELAY = 800L
-        private const val START_MAIN_SCREEN_DELAY = 800L
-    }
 }
