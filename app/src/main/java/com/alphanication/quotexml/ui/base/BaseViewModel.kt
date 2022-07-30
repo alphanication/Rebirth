@@ -9,8 +9,7 @@ abstract class BaseViewModel : ViewModel() {
 
     override fun onCleared() {
         disposables.apply {
-            clear()
-            dispose()
+            this.clear()
         }
         super.onCleared()
     }
