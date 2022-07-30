@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.splash.SplashScreenFragment">
 
+    <ImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/ic_self_improvement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
