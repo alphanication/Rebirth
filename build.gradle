@@ -1,7 +1,12 @@
 buildscript {
     ext {
+        nav_version = "2.5.0"
+        lifecycle_version = "2.5.0"
+        dagger_hilt_version = "2.41"
+        retrofit_version = "2.9.0"
         rxjava_version = "3.1.3"
         rxandroid_version = "3.0.0"
+        size_unit_version = "1.1.0"
     }
     repositories {
         maven { url "https://maven.google.com" }
