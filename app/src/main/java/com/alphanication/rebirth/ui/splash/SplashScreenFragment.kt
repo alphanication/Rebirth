@@ -1,4 +1,4 @@
-package com.alphanication.quotexml.ui.splash
+package com.alphanication.rebirth.ui.splash
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.alphanication.quotexml.R
-import com.alphanication.quotexml.ui.base.BaseFragment
+import com.alphanication.rebirth.R
+import com.alphanication.rebirth.ui.base.BaseFragment
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : BaseFragment() {

@@ -1,4 +1,4 @@
-package com.alphanication.quotexml
+package com.alphanication.rebirth
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

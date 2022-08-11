@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package com.alphanication.quotexml.utils
+package com.alphanication.rebirth.utils
 
 import android.view.View
 

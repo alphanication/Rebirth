@@ -1,11 +1,11 @@
-package com.alphanication.quotexml.ui.mainquote
+package com.alphanication.rebirth.ui.mainquote
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.alphanication.quotexml.R
-import com.alphanication.quotexml.ui.base.BaseFragment
+import com.alphanication.rebirth.R
+import com.alphanication.rebirth.ui.base.BaseFragment
 
 class MainQuoteFragment : BaseFragment() {
 

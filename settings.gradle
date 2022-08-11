@@ -16,5 +16,5 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
     }
 }
-rootProject.name = "Quotexml"
+rootProject.name = "Rebirth"
 include ':app'
