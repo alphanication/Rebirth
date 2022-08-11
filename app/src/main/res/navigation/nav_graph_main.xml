@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.alphanication.quotexml.ui.splash.SplashScreenFragment"
+        android:name="com.alphanication.rebirth.ui.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen">
         <action
@@ -18,6 +18,6 @@
     </fragment>
     <fragment
         android:id="@+id/mainQuoteFragment"
-        android:name="com.alphanication.quotexml.ui.mainquote.MainQuoteFragment"
+        android:name="com.alphanication.rebirth.ui.mainquote.MainQuoteFragment"
         tools:layout="@layout/fragment_main_quote" />
 </navigation>

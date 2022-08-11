@@ -1,4 +1,4 @@
-package com.alphanication.quotexml.ui.base
+package com.alphanication.rebirth.ui.base
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable

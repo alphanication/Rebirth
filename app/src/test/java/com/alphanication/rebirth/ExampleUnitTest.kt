@@ -1,4 +1,4 @@
-package com.alphanication.quotexml
+package com.alphanication.rebirth
 
 import org.junit.Test
 
