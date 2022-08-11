@@ -1,4 +1,4 @@
-package com.alphanication.rebirth.ui.mainquote
+package com.example.quotes.mainquote
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,6 @@ class MainQuoteFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main_quote, container, false)
+        return inflater.inflate(com.example.quotes.R.layout.fragment_main_quote, container, false)
     }
 }

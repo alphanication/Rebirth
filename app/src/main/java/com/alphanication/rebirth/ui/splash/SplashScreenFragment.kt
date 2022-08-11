@@ -25,7 +25,7 @@ class SplashScreenFragment : BaseFragment() {
 
     private fun startMainQuoteScreen() {
         Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
+//            findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
         }, SPLASH_SCREEN_DELAY_MS)
     }
 

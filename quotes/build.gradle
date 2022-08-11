@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
@@ -9,7 +9,6 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.quotes"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -64,4 +63,6 @@ dependencies {
     // SCALABLE SIZE UNIT
     implementation "com.intuit.sdp:sdp-android:$size_unit_version"
     implementation "com.intuit.ssp:ssp-android:$size_unit_version"
+
+    implementation project(path: ':app')
 }
