@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.alphanication.rebirth.ui.base.BaseFragment
+import androidx.fragment.app.Fragment
 
-class MainQuoteFragment : BaseFragment() {
+//import com.alphanication.rebirth.ui.base.BaseFragment
+
+class MainQuoteFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
