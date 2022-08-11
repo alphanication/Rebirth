@@ -7,13 +7,13 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.alphanication.rebirth.R
 import com.alphanication.rebirth.navigation.DeepLinks
-import com.alphanication.rebirth.ui.base.BaseFragment
 
 @SuppressLint("CustomSplashScreen")
-class SplashScreenFragment : BaseFragment() {
+class SplashScreenFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
