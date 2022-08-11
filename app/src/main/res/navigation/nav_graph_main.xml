@@ -9,15 +9,6 @@
         android:id="@+id/splashScreenFragment"
         android:name="com.alphanication.rebirth.ui.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen">
-        <action
-            android:id="@+id/action_splashScreenFragment_to_mainQuoteFragment"
-            app:destination="@id/mainQuoteFragment"
-            app:popUpTo="@id/nav_graph_main"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainQuoteFragment"
-        android:name="com.alphanication.rebirth.ui.mainquote.MainQuoteFragment"
-        tools:layout="@layout/fragment_main_quote" />
+        tools:layout="@layout/fragment_splash_screen" />
+
 </navigation>
