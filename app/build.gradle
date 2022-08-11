@@ -49,16 +49,9 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    // LIFECYCLE: VIEWMODEL, LIVEDATA
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
-
     // RXJAVA
     implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava3:rxandroid:$rxandroid_version"
-
-    // RETROFIT
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
     // DAGGER-HILT
     implementation "com.google.dagger:hilt-android:$dagger_hilt_version"
