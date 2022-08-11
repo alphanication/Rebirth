@@ -1,4 +1,4 @@
-package com.alphanication.rebirth.ui.base
+package com.example.quotes.base.ui
 
 import android.widget.Toast
 import androidx.fragment.app.Fragment
