@@ -61,4 +61,5 @@ dependencies {
     implementation "com.intuit.sdp:sdp-android:$size_unit_version"
     implementation "com.intuit.ssp:ssp-android:$size_unit_version"
 
+    implementation project(path: ':quotes')
 }
