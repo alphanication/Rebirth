@@ -1,6 +1,7 @@
 package com.alphanication.rebirth.ui.splash
 
 import android.annotation.SuppressLint
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.alphanication.rebirth.R
+import com.alphanication.rebirth.navigation.DeepLinks
 import com.alphanication.rebirth.ui.base.BaseFragment
 
 @SuppressLint("CustomSplashScreen")
@@ -25,7 +27,7 @@ class SplashScreenFragment : BaseFragment() {
 
     private fun startMainQuoteScreen() {
         Handler().postDelayed({
-//            findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
+            findNavController().navigate(Uri.parse(DeepLinks.QOUTES_DEEP_LINK))
         }, SPLASH_SCREEN_DELAY_MS)
     }
 
