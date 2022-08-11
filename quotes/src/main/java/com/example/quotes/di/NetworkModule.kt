@@ -1,4 +1,4 @@
-package com.alphanication.rebirth.di
+package com.example.quotes.di
 
 import dagger.Module
 import dagger.hilt.InstallIn
