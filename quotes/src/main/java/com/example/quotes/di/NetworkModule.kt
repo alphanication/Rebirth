@@ -1,12 +1,12 @@
 package com.example.quotes.di
 
 import com.example.quotes.data.remote.api.QuoteApiService
-import com.example.quotes.data.remote.utils.DataURLConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
@@ -18,6 +18,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofitInterface(): Retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .baseUrl(QuoteApiService.BASE_URL)
         .build()
 
