@@ -17,13 +17,11 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun providesQuoteDataSource(quoteApiService: QuoteApiService) : QuoteDataSource {
-        return QuoteDataSourceImpl(quoteApiService = quoteApiService)
-    }
+    fun providesQuoteDataSource(quoteApiService: QuoteApiService): QuoteDataSource =
+        QuoteDataSourceImpl(quoteApiService = quoteApiService)
 
     @Provides
     @Singleton
-    fun providesQuoteRepository(quoteDataSource: QuoteDataSource) : QuoteRepository {
-        return QuoteRepositoryImpl(quoteDataSource = quoteDataSource)
-    }
+    fun providesQuoteRepository(quoteDataSource: QuoteDataSource): QuoteRepository =
+        QuoteRepositoryImpl(quoteDataSource = quoteDataSource)
 }
