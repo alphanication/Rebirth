@@ -9,7 +9,7 @@ object DataURLConstants {
     const val SENDER_LINK_FIELD = "senderLink"
     const val QUOTE_LINK_FIELD = "quoteLink"
 
-    /** GET QuoteDto - parameters */
+    /** QuoteApiService getQuote() - PARAMETERS */
     const val QUOTE_METHOD_FIELD = "method"
     const val QUOTE_METHOD_ACTUAL_FIELD = "getQuote"
     const val QUOTE_FORMAT_FIELD = "format"
