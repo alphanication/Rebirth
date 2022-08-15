@@ -8,5 +8,6 @@ import io.reactivex.rxjava3.core.Single
 
 class QuoteRepositoryImpl(private val quoteDataSource: QuoteDataSource) : QuoteRepository {
 
-    override fun getQuote(lang: String): Single<Quote> = quoteDataSource.getQuote(lang = lang).map { QuoteMapper().from(it) }
+    override fun getQuote(lang: String): Single<Quote> =
+        quoteDataSource.getQuote(lang = lang).map { QuoteMapper().from(it) }
 }
