@@ -1,11 +1,11 @@
-package com.example.quotes.ui.mainquote
+package com.example.quotes.ui.quote.mainquote
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.quotes.base.ui.BaseFragment
+import com.example.quotes.ui.base.BaseFragment
 import com.example.quotes.databinding.FragmentMainQuoteBinding
 import dagger.hilt.android.AndroidEntryPoint
 

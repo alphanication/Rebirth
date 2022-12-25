@@ -1,4 +1,4 @@
-package com.example.quotes.data.remote.mappers
+package com.example.quotes.data.remote.utils
 
 interface MapperInterface<I, O> {
 

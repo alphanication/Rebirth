@@ -1,8 +1,8 @@
 package com.example.quotes.di
 
 import com.example.quotes.data.remote.api.QuoteApiService
-import com.example.quotes.data.remote.data_source.QuoteDataSource
-import com.example.quotes.data.remote.data_source.QuoteDataSourceImpl
+import com.example.quotes.data.remote.data_source.quote.QuoteDataSource
+import com.example.quotes.data.remote.data_source.quote.QuoteDataSourceImpl
 import com.example.quotes.data.remote.repository.QuoteRepositoryImpl
 import com.example.quotes.domain.repository.QuoteRepository
 import dagger.Module

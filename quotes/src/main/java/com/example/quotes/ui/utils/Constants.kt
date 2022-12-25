@@ -1,4 +1,4 @@
-package com.example.quotes.utils
+package com.example.quotes.ui.utils
 
 object Constants {
 
