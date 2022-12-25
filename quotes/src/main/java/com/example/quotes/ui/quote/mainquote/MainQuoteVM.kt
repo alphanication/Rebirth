@@ -1,13 +1,13 @@
-package com.example.quotes.ui.mainquote
+package com.example.quotes.ui.quote.mainquote
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.quotes.base.ui.BaseViewModel
+import com.example.quotes.ui.base.BaseViewModel
 import com.example.quotes.di.IoScheduler
 import com.example.quotes.di.MainScheduler
 import com.example.quotes.domain.models.Quote
 import com.example.quotes.domain.repository.QuoteRepository
-import com.example.quotes.utils.Constants
+import com.example.quotes.ui.utils.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.core.Scheduler
 import javax.inject.Inject
@@ -30,9 +30,11 @@ class MainQuoteVM @Inject constructor(
     }
 
     fun getQuote() {
-        disposables += quoteRepository.getQuote(Constants.LANGUAGE_RU_CODE)
-            .subscribeOn(ioScheduler)
-            .observeOn(mainScheduler)
-            .subscribe({ _quote.postValue(it) }, { _error.postValue(it) })
+        disposables.plusAssign(
+            quoteRepository.getQuote(Constants.LANGUAGE_RU_CODE)
+                .subscribeOn(ioScheduler)
+                .observeOn(mainScheduler)
+                .subscribe({ _quote.postValue(it) }, { _error.postValue(it) })
+        )
     }
 }

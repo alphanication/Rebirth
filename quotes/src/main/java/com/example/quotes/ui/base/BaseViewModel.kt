@@ -1,4 +1,4 @@
-package com.example.quotes.base.ui
+package com.example.quotes.ui.base
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -13,9 +13,7 @@ abstract class BaseViewModel : ViewModel() {
     }
 
     override fun onCleared() {
-        disposables.apply {
-            this.clear()
-        }
+        disposables.clear()
         super.onCleared()
     }
 }

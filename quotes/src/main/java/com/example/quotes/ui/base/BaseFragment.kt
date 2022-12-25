@@ -1,4 +1,4 @@
-package com.example.quotes.base.ui
+package com.example.quotes.ui.base
 
 import android.widget.Toast
 import androidx.fragment.app.Fragment

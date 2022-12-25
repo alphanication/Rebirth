@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainQuoteFragment"
-        android:name="com.example.quotes.ui.mainquote.MainQuoteFragment"
+        android:name="com.example.quotes.ui.quote.mainquote.MainQuoteFragment"
         android:label="fragment_main_quote"
         tools:layout="@layout/fragment_main_quote">
         <deepLink app:uri="quotes://main" />
