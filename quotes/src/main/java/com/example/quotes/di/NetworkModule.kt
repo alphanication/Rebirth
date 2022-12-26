@@ -1,11 +1,10 @@
 package com.example.quotes.di
 
 import android.content.Context
-import android.util.Log
 import com.example.quotes.data.remote.api.QuoteApiService
 import com.example.quotes.domain.repository.NetworkMonitor
+import com.example.quotes.domain.repository.StrategicalExceptionHandler
 import com.example.quotes.ui.utils.LiveNetworkMonitor
-import com.example.quotes.ui.utils.NetworkException
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +17,6 @@ import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Module
@@ -51,14 +49,14 @@ object NetworkModule {
 }
 
 class ErrorInterceptor(
-    private val networkMonitor: NetworkMonitor
+    private val networkMonitor: NetworkMonitor,
 ) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val request: Request = chain.request()
 
         when {
-            (networkMonitor.isConnected().not()) -> throw NetworkException()
+            (networkMonitor.isConnected().not()) -> Unit
         }
 
         return chain.proceed(request)

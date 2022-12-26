@@ -1,3 +1,5 @@
 package com.example.quotes.ui.utils
 
-class NetworkException : Exception()
+enum class StrategicalExceptions {
+    NETWORK_DISABLE
+}
