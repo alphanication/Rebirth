@@ -5,16 +5,19 @@
     android:id="@+id/nav_graph_main"
     app:startDestination="@id/splashScreenFragment">
 
-    <include app:graph="@navigation/nav_graph_quotes" />
-
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.alphanication.rebirth.ui.splash.SplashScreenFragment"
+        android:name="com.alphanication.rebirth.ui.app.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen">
         <action
-            android:id="@+id/action_splashScreenFragment_to_nav_graph_quotes2"
-            app:destination="@id/nav_graph_quotes" />
+            android:id="@+id/action_splashScreenFragment_to_mainQuoteFragment"
+            app:destination="@id/mainQuoteFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mainQuoteFragment"
+        android:name="com.alphanication.rebirth.ui.app.quote.mainquote.MainQuoteFragment"
+        android:label="MainQuoteFragment"
+        tools:layout="@layout/fragment_main_quote" />
 
 </navigation>

@@ -18,4 +18,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Rebirth"
 include ':app'
-include ':quotes'
