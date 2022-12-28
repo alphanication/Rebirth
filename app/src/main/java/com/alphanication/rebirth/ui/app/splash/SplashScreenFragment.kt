@@ -8,8 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.alphanication.rebirth.R
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 private const val SPLASH_SCREEN_DELAY_MS = 800L
 
@@ -26,9 +29,8 @@ class SplashScreenFragment : Fragment() {
         startMainQuoteScreen()
     }
 
-    private fun startMainQuoteScreen() {
-        Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
-        }, SPLASH_SCREEN_DELAY_MS)
+    private fun startMainQuoteScreen() = lifecycleScope.launch {
+        delay(SPLASH_SCREEN_DELAY_MS)
+        findNavController().navigate(R.id.action_splashScreenFragment_to_mainQuoteFragment)
     }
 }

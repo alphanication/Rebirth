@@ -10,7 +10,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 
 class LiveNetworkMonitor(
     @ApplicationContext private val appContext: Context
-) : com.alphanication.rebirth.domain.repository.NetworkMonitor {
+) : NetworkMonitor {
 
     override fun isConnected(): Boolean {
         val connectivityManager =
