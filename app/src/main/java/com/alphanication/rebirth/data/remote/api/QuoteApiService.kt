@@ -14,7 +14,7 @@ import retrofit2.http.POST
 interface QuoteApiService {
 
     /* lang: on documentation (https://forismatic.com/api/) - en / ru
-     * Vorobey Egor / 14.08.2022 */
+     * Egor Vorobey, 14.08.2022 */
 
     @POST("1.0/")
     @FormUrlEncoded

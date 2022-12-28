@@ -17,11 +17,11 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun providesQuoteDataSource(quoteApiService: com.alphanication.rebirth.data.remote.api.QuoteApiService): com.alphanication.rebirth.data.remote.data_source.quote.QuoteDataSource =
-        com.alphanication.rebirth.data.remote.data_source.quote.QuoteDataSourceImpl(quoteApiService = quoteApiService)
+    fun providesQuoteDataSource(quoteApiService: QuoteApiService): QuoteDataSource =
+        QuoteDataSourceImpl(quoteApiService = quoteApiService)
 
     @Provides
     @Singleton
-    fun providesQuoteRepository(quoteDataSource: com.alphanication.rebirth.data.remote.data_source.quote.QuoteDataSource): QuoteRepository =
-        com.alphanication.rebirth.data.remote.repository.QuoteRepositoryImpl(quoteDataSource = quoteDataSource)
+    fun providesQuoteRepository(quoteDataSource: QuoteDataSource): QuoteRepository =
+        QuoteRepositoryImpl(quoteDataSource = quoteDataSource)
 }

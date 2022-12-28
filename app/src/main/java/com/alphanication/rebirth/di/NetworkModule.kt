@@ -29,13 +29,13 @@ object NetworkModule {
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .client(OkHttpClient().newBuilder().addInterceptor(errorInterceptor).build())
-        .baseUrl(com.alphanication.rebirth.data.remote.api.QuoteApiService.BASE_URL)
+        .baseUrl(QuoteApiService.BASE_URL)
         .build()
 
     @Provides
     @Singleton
-    fun provideQuoteApi(retrofit: Retrofit): com.alphanication.rebirth.data.remote.api.QuoteApiService =
-        retrofit.create(com.alphanication.rebirth.data.remote.api.QuoteApiService::class.java)
+    fun provideQuoteApi(retrofit: Retrofit): QuoteApiService =
+        retrofit.create(QuoteApiService::class.java)
 
     @Provides
     @Singleton

@@ -2,8 +2,6 @@ package com.alphanication.rebirth.data.remote.utils
 
 object DataURLConstants {
 
-    const val EMPTY_STR = ""
-
     /** QuoteDto FIELDS */
     const val QUOTE_TEXT_FIELD = "quoteText"
     const val QUOTE_AUTHOR_FIELD = "quoteAuthor"

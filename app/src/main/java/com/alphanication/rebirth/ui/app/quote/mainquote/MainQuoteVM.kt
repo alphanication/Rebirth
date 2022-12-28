@@ -14,13 +14,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainQuoteVM @Inject constructor(
-    @com.alphanication.rebirth.di.IoScheduler private val ioScheduler: Scheduler,
-    @com.alphanication.rebirth.di.MainScheduler private val mainScheduler: Scheduler,
-    private val quoteRepository: com.alphanication.rebirth.domain.repository.QuoteRepository
+    @IoScheduler private val ioScheduler: Scheduler,
+    @MainScheduler private val mainScheduler: Scheduler,
+    private val quoteRepository: QuoteRepository
 ) : BaseViewModel() {
 
-    private val _quote = MutableLiveData<com.alphanication.rebirth.domain.models.Quote>()
-    val quote: LiveData<com.alphanication.rebirth.domain.models.Quote> = _quote
+    private val _quote = MutableLiveData<Quote>()
+    val quote: LiveData<Quote> = _quote
 
     private val _error = MutableLiveData<Throwable>()
     val error: LiveData<Throwable> = _error
