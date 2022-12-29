@@ -55,6 +55,8 @@ class ErrorInterceptor(
     override fun intercept(chain: Interceptor.Chain): Response {
         val request: Request = chain.request()
 
+        // в случае пойматия ошибки интернет-коннекта, прокидывать в активити
+        // любым из способов для отображения error'а, Воробей Егор, 29.12.2022
         when {
             (networkMonitor.isConnected().not()) -> Unit
         }
