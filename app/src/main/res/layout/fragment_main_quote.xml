@@ -4,35 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alphanication.rebirth.ui.quote.mainquote.MainQuoteFragment">
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvAuthor"
-        style="@style/gost_type_a_18ssp_bold_italic"
-        android:layout_width="0dp"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:gravity="center"
-        android:maxLines="1"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tvQuote"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tvQuoteDivider"
+        android:src="@drawable/new_background_cropped"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvQuote"
         style="@style/gost_type_a_18ssp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
         android:gravity="center"
         android:textColor="@color/black"
+        android:padding="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tvQuoteDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvQuote" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        style="@style/gost_type_a_18ssp_bold_italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvQuoteDivider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/gost_type_a_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/impossible_or_im_possible"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

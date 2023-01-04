@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import com.alphanication.rebirth.R
 import com.alphanication.rebirth.databinding.FragmentMainQuoteBinding
 import com.alphanication.rebirth.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,7 +37,8 @@ class MainQuoteFragment : BaseFragment() {
 
     private fun initDataListeners() {
         viewModel.quote.observe(viewLifecycleOwner) {
-            binding.tvAuthor.text = it.quoteAuthor
+            binding.tvAuthor.text = resources.getString(R.string.author_c) +
+                    it.quoteAuthor.ifEmpty { resources.getString(R.string.anonymous) }
             binding.tvQuote.text = it.quoteText
         }
         viewModel.error.observe(viewLifecycleOwner) {
