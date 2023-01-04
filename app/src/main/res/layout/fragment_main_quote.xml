@@ -12,7 +12,8 @@
         app:layout_constraintTop_toTopOf="@id/tvQuote"
         android:layout_marginBottom="@dimen/_40sdp"
         app:layout_constraintBottom_toBottomOf="@id/tvQuoteDivider"
-        android:src="@drawable/new_background_cropped"
+        android:src="@drawable/background_quote"
+        android:alpha="0.4"
         tools:ignore="ContentDescription" />
 
     <TextView
