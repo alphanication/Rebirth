@@ -8,7 +8,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import com.alphanication.rebirth.R
 import com.alphanication.rebirth.databinding.FragmentMainQuoteBinding
+import com.alphanication.rebirth.domain.models.Quote
 import com.alphanication.rebirth.ui.base.BaseFragment
+import com.alphanication.rebirth.utils.show
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -36,13 +38,18 @@ class MainQuoteFragment : BaseFragment() {
     }
 
     private fun initDataListeners() {
-        viewModel.quote.observe(viewLifecycleOwner) {
-            binding.tvAuthor.text = resources.getString(R.string.author_c) +
-                    it.quoteAuthor.ifEmpty { resources.getString(R.string.anonymous) }
-            binding.tvQuote.text = it.quoteText
-        }
+        viewModel.quote.observe(viewLifecycleOwner) { showQuote(it) }
         viewModel.error.observe(viewLifecycleOwner) {
             it.message?.let { message -> showError(message) }
+        }
+    }
+
+    private fun showQuote(quote: Quote) {
+        binding.apply {
+            tvQuoteDivider.show()
+            tvAuthor.text = resources.getString(R.string.author_c) +
+                    quote.quoteAuthor.ifEmpty { resources.getString(R.string.anonymous) }
+            tvQuote.text = quote.quoteText
         }
     }
 }
