@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Rebirth</string>
 
+    <!-- Base -->
+    <string name="network_error">Отсутствует подключение к Интернету.</string>
+
     <!-- Main Quote Fragment -->
     <string name="impossible_or_im_possible">impossible or i\'m possible?</string>
     <string name="author_c">© &#160;</string>
     <string name="anonymous">неизвестная личность</string>
+
 
 </resources>
