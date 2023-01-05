@@ -34,6 +34,7 @@
     <View
         android:id="@+id/tvQuoteDivider"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/_25sdp"
         android:layout_marginHorizontal="@dimen/_20sdp"
