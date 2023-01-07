@@ -25,13 +25,9 @@ class MainQuoteVM @Inject constructor(
     private val _error = MutableLiveData<Throwable>()
     val error: LiveData<Throwable> = _error
 
-    init {
-        getQuote()
-    }
-
-    fun getQuote() {
+    fun getQuote(language: String) {
         disposables.plusAssign(
-            quoteRepository.getQuote(Constants.LANGUAGE_RU_CODE)
+            quoteRepository.getQuote(language)
                 .subscribeOn(ioScheduler)
                 .observeOn(mainScheduler)
                 .subscribe({ _quote.postValue(it) }, { _error.postValue(it) })

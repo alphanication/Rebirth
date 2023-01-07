@@ -10,8 +10,10 @@ import com.alphanication.rebirth.R
 import com.alphanication.rebirth.databinding.FragmentMainQuoteBinding
 import com.alphanication.rebirth.domain.models.Quote
 import com.alphanication.rebirth.ui.base.BaseFragment
+import com.alphanication.rebirth.ui.utils.Constants
 import com.alphanication.rebirth.utils.show
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 
 @AndroidEntryPoint
 class MainQuoteFragment : BaseFragment() {
@@ -31,10 +33,20 @@ class MainQuoteFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         initDataListeners()
         initUi()
+        getQuotesWithLanguageSystem()
     }
 
     private fun initUi() {
-        binding.tvQuote.setOnClickListener { viewModel.getQuote() }
+        binding.tvQuote.setOnClickListener {
+            getQuotesWithLanguageSystem()
+        }
+    }
+
+    private fun getQuotesWithLanguageSystem() {
+        viewModel.getQuote(
+            if (Locale.getDefault().language == Constants.LANGUAGE_RU_CODE) Constants.LANGUAGE_RU_CODE
+            else Constants.LANGUAGE_EN_CODE
+        )
     }
 
     private fun initDataListeners() {
