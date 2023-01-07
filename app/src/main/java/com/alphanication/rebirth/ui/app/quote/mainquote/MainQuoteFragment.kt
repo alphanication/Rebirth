@@ -1,6 +1,8 @@
 package com.alphanication.rebirth.ui.app.quote.mainquote
 
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,7 +46,8 @@ class MainQuoteFragment : BaseFragment() {
 
     private fun getQuotesWithLanguageSystem() {
         viewModel.getQuote(
-            if (Locale.getDefault().language == Constants.LANGUAGE_RU_CODE) Constants.LANGUAGE_RU_CODE
+            if (Resources.getSystem().configuration.locales.get(0).language == Constants.LANGUAGE_RU_CODE)
+                Constants.LANGUAGE_RU_CODE
             else Constants.LANGUAGE_EN_CODE
         )
     }
