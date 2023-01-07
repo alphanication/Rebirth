@@ -6,6 +6,17 @@
         <item name="fontFamily">@font/gost_a</item>
     </style>
 
+    <style name="gost_type_a_14ssp">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="fontFamily">@font/gost_a</item>
+    </style>
+
+    <style name="gost_type_a_14ssp_bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="fontFamily">@font/gost_a</item>
+    </style>
+
     <style name="gost_type_a_18ssp">
         <item name="android:textSize">@dimen/_18ssp</item>
         <item name="fontFamily">@font/gost_a</item>
@@ -16,5 +27,4 @@
         <item name="android:textSize">@dimen/_18ssp</item>
         <item name="fontFamily">@font/gost_a</item>
     </style>
-
 </resources>

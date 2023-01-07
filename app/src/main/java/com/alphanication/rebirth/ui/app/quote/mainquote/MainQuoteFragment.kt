@@ -39,8 +39,13 @@ class MainQuoteFragment : BaseFragment() {
     }
 
     private fun initUi() {
-        binding.tvQuote.setOnClickListener {
-            getQuotesWithLanguageSystem()
+        binding.apply {
+            tvQuote.setOnClickListener {
+                getQuotesWithLanguageSystem()
+            }
+            btnUpdateQuote.setOnClickListener {
+               getQuotesWithLanguageSystem()
+            }
         }
     }
 
