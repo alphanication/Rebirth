@@ -4,7 +4,7 @@ object Constants {
 
     const val EMPTY_STRING = ""
 
-    /** LANGUAGES CODE */
+    /** LANGUAGES CODES */
     const val LANGUAGE_RU_CODE = "ru"
     const val LANGUAGE_EN_CODE = "en"
 }
